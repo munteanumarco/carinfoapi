@@ -102,7 +102,7 @@ namespace Cars.Controllers
         public async Task<ActionResult<IEnumerable<RaceWithoutCarsDto>>> GetRacesForCar(int id)
         {
             var car = await _carRepository.GetCarAsync(id);
-
+            // Check for null 
             if (car == null)
             {
                 return NotFound();
